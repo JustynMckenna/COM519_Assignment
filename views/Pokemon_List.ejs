@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <title>Pokemon</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.5/examples/album/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <link href="css/album.css" rel="stylesheet" />
+  </head>
+  <body>
+    <%- include('common/header'); -%>
+<div class="container">
+    <div class="row col-md-12 col-md-offset-2 custyle mx-auto">
+        <h1 class="mx-auto"> Pokemon List </h1>
+
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Type 1</th>
+            <th>Type 2</th>
+
+        </tr>
+    </thead>
+            <% pokemons.forEach(function(pokemon){ %>
+            <tr>
+                <td> <img src="images/<%= pokemon.Name %>.png"> </td>
+                <td><%=  pokemon.Name  %></td>
+                <td><%=  pokemon.Type1  %></td>
+                <td><%=  pokemon.Type2  %></td>
+                <td class="text-center"><a href="/Pokemon_List/delete/<%= pokemon.id %>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</a><a class='btn btn-info btn-xs' href="/Pokemon_List/update/<%= pokemon.id %>" ><span class="glyphicon glyphicon-edit"></span> Edit</a></td>
+            </tr>
+            <% }); %>
+          
+    </table>
+    </div>
+
+    
+    
+
+    <%- include('common/footer') -%>
+  </body>
+</html>

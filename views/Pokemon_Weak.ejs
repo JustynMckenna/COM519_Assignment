@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <title>Pokemon</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.5/examples/album/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <link href="css/album.css" rel="stylesheet" />
+  </head>
+  <body>
+    <%- include('common/header'); -%>
+<div class="container">
+    <div class="row col-md-12 col-md-offset-2 custyle mx-auto">
+        <h1 class="mx-auto"> Pokemon Weaknesses </h1>
+        
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-">
+              <form action="/Weak_Choice">
+                <input type="radio" id="fire" name="fire" value="Fire">
+                <label for="fire"> Fire</label>
+                <input type="radio" id="water" name="water" value="Water">
+                <label for="water"> Water</label>
+                <input type="radio" id="grass" name="grass" value="Grass">
+                <label for="grass"> Grass</label>
+                <input type="radio" id="rock" name="rock" value="Rock">
+                <label for="rock"> Rock</label>
+                <input type="radio" id="ground" name="ground" value="Ground">
+                <label for="ground"> Ground</label>
+                <input type="radio" id="flying" name="flying" value="Flying">
+                <label for="flying"> Flying</label></br>
+                <input type="radio" id="fairy" name="fairy" value="Fairy">
+                <label for="fairy"> Fairy</label>
+                <input type="radio" id="electric" name="electric" value="Electric">
+                <label for="electric"> Electric</label>
+                <input type="radio" id="bug" name="bug" value="Bug">
+                <label for="bug"> Bug</label>
+                <input type="radio" id="fighting" name="fighting" value="Fighting">
+                <label for="fighting"> Fighting</label>
+                <input type="radio" id="ice" name="ice" value="Ice">
+                <label for="ice"> Ice</label>
+                <input type="radio" id="steel" name="steel" value="Steel">
+                <label for="steel"> Steel</label></br>
+                <input type="radio" id="poison" name="poison" value="Poison">
+                <label for="poison"> Poison</label>
+                <input type="radio" id="ghost" name="ghost" value="Ghost">
+                <label for="ghost"> Ghost</label>
+                <input type="radio" id="dark" name="dark" value="Dark">
+                <label for="dark"> Dark</label>
+                <input type="radio" id="dragon" name="dragon" value="Dragon">
+                <label for="dragon"> Dragon</label>
+                <input type="radio" id="normal" name="normal" value="Normal">
+                <label for="normal"> Normal</label>
+                <input type="radio" id="psychic" name="psychic" value="Psychic">
+                <label for="psychic"> Psychic</label></br>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </div>
+        </div>
+
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Type 1</th>
+            <th>Type 2</th>
+
+        </tr>
+    </thead>
+            <% pokemons.forEach(function(pokemon){ %>
+            <tr>
+                <td> <img src="images/<%= pokemon.Name %>.png"> </td>
+                <td><%=  pokemon.Name  %></td>
+                <td><%=  pokemon.Type1  %></td>
+                <td><%=  pokemon.Type2  %></td>
+            </tr>
+            <% }); %>
+          
+    </table>
+    </div>
+
+    
+    
+
+    <%- include('common/footer') -%>
+  </body>
+</html>
