@@ -10,4 +10,4 @@ Currently the application is able to create an account, read the pokemon databas
 
 ## How to run the project
 
-To view the application, clone the project into your files. After this step is done open up VScode on the folder marked COM519_Assignment, open a new terminal and type the command line 'npm install' to make sure the packages are up to date, then run the command line 'npm run dev'. This will result in the program being run and all that's left to do is to use the link stated above to access the Web Application.
+To view the application, clone the project into your files and rename .env.delete to .env. After this step is done open up VScode on the folder marked COM519_Assignment, open a new terminal and type the command line 'npm install' to make sure the packages are up to date, then run the command line 'npm run dev'. This will result in the program being run and all that's left to do is to use the link stated above to access the Web Application.
