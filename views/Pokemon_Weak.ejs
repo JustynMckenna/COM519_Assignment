@@ -87,12 +87,14 @@
         </tr>
     </thead>
             <% pokemons.forEach(function(pokemon){ %>
-            <tr>
+              <tr>
+              <% if (pokemon.Type1 === "Fire") { %>
                 <td> <img src="images/<%= pokemon.Name %>.png"> </td>
                 <td><%=  pokemon.Name  %></td>
                 <td><%=  pokemon.Type1  %></td>
                 <td><%=  pokemon.Type2  %></td>
-            </tr>
+              <% }; %>
+              </tr>
             <% }); %>
           
     </table>

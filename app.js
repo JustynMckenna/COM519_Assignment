@@ -73,7 +73,7 @@ app.get("/Create_User", (req, res) => {
 
 app.post("/join", userController.create);
 
-app.get("/Login", (req, res) => {
+app.get("/Login_User", (req, res) => {
   res.render('Login_User', { errors: {} })
 });
 app.post("/Login", userController.login);
