@@ -1,6 +1,7 @@
 # COM519_Assignment
 
 Github repo link: https://github.com/JustynMckenna/COM519_Assignment
+
 Local Host link for Web App: http://localhost:2020
 
 This web application was designed to help people playing pokemon descern the typings of certain pokemon as well as finding their strengths and weaknesses. The information a visitor will be able to see for the pokemon are: A visual reference of the pokemon, the pokemon's name, the pokemon's primary typing and the pokemon's secondary typing (if they have one).
